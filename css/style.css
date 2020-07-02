@@ -731,11 +731,11 @@ footer .footer-gray .region-second nav ul.menu {
   float: left;
   width: 100%;
   padding: 10px 10px 10px 30px;
-  display: block !important;
+  display: none;
 }
 @media (min-width: 1280px) {
   footer .footer-gray .region-second nav ul.menu {
-    padding: 20px 10px !important;
+    display: block !important;
     padding-left: 0;
   }
 }

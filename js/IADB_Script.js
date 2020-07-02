@@ -15,6 +15,23 @@ var acc = document.getElementsByClassName("menu-btn");
     });
 }
 
+//Desplegable footer
+var acc = document.getElementsByClassName("btn-acc");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var menu = this.nextElementSibling;
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    }  else {
+      menu.style.display = "block";
+    }
+  });
+}
+
+
 //Block.search
 
 /* When the user clicks on the button, 
@@ -67,23 +84,3 @@ function togglenav() {
     x.style.display = "block";
   }
 }
-
-
-function footer() {
-  var x = document.getElementById("content-nav");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-
-
-
-$('.btn-acc').on('click','h2',function(){
-	var t = $(this);
-	var tp = t.next();
-	var p = t.parent().siblings().find('ul');
-	tp.slideToggle();
-	p.slideUp();
-});
